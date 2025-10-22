@@ -1,26 +1,26 @@
+
+
 import React from "react";
 
-function MealPlanItem({ meal, onRemove }) {
-  function handleRemove() {
-    if (window.confirm(`Remove "${meal.title}" from plan?`)) {
-      onRemove && onRemove(meal.id);
-    }
+function MealPlanItem({ meal }) {
+  if (!meal) {
+    return (
+      <div className="meal-card">
+        <p>Meal data not available</p>
+      </div>
+    );
   }
 
   return (
-    <li className="meal-plan-item">
-      <div className="meal-left">
-        {meal.image && <img className="meal-thumb" src={meal.image} alt={meal.title} />}
-        <div className="meal-info">
-          <div className="meal-title">{meal.title}</div>
-          <div className="meal-type">{meal.type}</div>
-        </div>
-      </div>
-
-      <div className="meal-actions">
-        <button className="btn-remove" onClick={handleRemove}>Remove</button>
-      </div>
-    </li>
+    <div className="meal-card">
+      {meal.image ? (
+        <img src={meal.image} alt={meal.title} className="meal-img" />
+      ) : (
+        <div className="no-image">No Image Available</div>
+      )}
+      <h3>{meal.title || "Untitled Meal"}</h3>
+      <p>{meal.summary ? meal.summary.slice(0, 100) + "..." : "No description"}</p>
+    </div>
   );
 }
 
