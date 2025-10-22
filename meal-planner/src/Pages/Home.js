@@ -5,12 +5,11 @@ import MealForm from '../components/MealForm';
 import mockRecipes from '../Data/mockRecipes';
 
 export default function Home() {
-  // central state held here so pages can be simple copies if needed
+
   const [recipes, setRecipes] = useState([]);
   const [mealPlan, setMealPlan] = useState([]);
 
   useEffect(() => {
-    // basic load: attempt API via parent repo pattern else fallback
     async function load() {
       try {
         const key = process.env.REACT_APP_SPOONACULAR_KEY;
@@ -25,9 +24,6 @@ export default function Home() {
     load();
   }, []);
 
-  // add meal to plan with rules:
-  //  - if a meal from that same primary category already exists, do not add another (only one per category)
-  //  - remove the recipe from the recipes list when added
   function addToMealPlan(recipe) {
     const primary = (recipe.dishTypes && recipe.dishTypes[0]) || recipe.category || 'other';
     const existsInCategory = mealPlan.some(m => ((m.dishTypes && m.dishTypes[0]) || m.category || 'other') === primary);

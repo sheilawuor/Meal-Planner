@@ -4,7 +4,7 @@ import { MealPlanContext } from "../Context/MealPlanContext";
 
 function Recipes() {
   const [filteredRecipes, setFilteredRecipes] = useState(mockRecipes);
-  const { addToMealPlan } = useContext(MealPlanContext); // ✅ extract function from context
+  const { addToMealPlan } = useContext(MealPlanContext); //extract function from context
 
   // Filter recipes by type
   const filterByType = (type) => {

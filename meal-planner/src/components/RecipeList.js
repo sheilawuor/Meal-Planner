@@ -9,7 +9,7 @@ export default function RecipeList({ onAddToMealPlan }) {
   const [filterDiet, setFilterDiet] = useState("all");
   const [sortOption, setSortOption] = useState("none");
 
-  // ✅ Fetch meals from JSON Server
+  
   useEffect(() => {
     fetch("http://localhost:8000/meals")
       .then((res) => res.json())
@@ -17,32 +17,28 @@ export default function RecipeList({ onAddToMealPlan }) {
       .catch((err) => console.error("Error fetching meals:", err));
   }, []);
 
-  // ✅ Apply filters and sorting
   function applyFilters(items) {
     let filtered = [...items];
 
-    // 🔍 Search by title
+    
     if (query.trim()) {
       filtered = filtered.filter((r) =>
         (r.title || "").toLowerCase().includes(query.toLowerCase())
       );
     }
 
-    // 🍳 Filter by meal type (Breakfast, Lunch, etc.)
     if (filterType !== "all") {
       filtered = filtered.filter(
         (r) => (r.type || "").toLowerCase() === filterType.toLowerCase()
       );
     }
 
-    // 🥗 Filter by diet (Vegan, Vegetarian, etc.)
     if (filterDiet !== "all") {
       filtered = filtered.filter(
         (r) => (r.diet || "").toLowerCase() === filterDiet.toLowerCase()
       );
     }
 
-    // 🔢 Sorting
     if (sortOption === "name-asc")
       filtered.sort((a, b) => (a.title || "").localeCompare(b.title || ""));
     if (sortOption === "name-desc")
