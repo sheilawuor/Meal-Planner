@@ -1,0 +1,29 @@
+.filter-sort {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.filter-buttons button {
+  background: #e0e0e0;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-buttons button:hover {
+  background: #cfcfcf;
+}
+
+.filter-buttons .active {
+  background: #4caf50;
+  color: white;
+}

@@ -1,0 +1,276 @@
+ {
+  "meals": [
+    {
+      "id": "1",
+      "title": "Pancakes",
+      "image": "https://www.themealdb.com/images/media/meals/rwuyqx1511383174.jpg",
+      "description": "Fluffy pancakes perfect for breakfast.",
+      "type": "Breakfast",
+      "calories": 350,
+      "diet": "Vegetarian",
+      "ingredients": [
+        "1 cup flour",
+        "2 tbsp sugar",
+        "1 cup milk",
+        "1 egg",
+        "2 tbsp butter",
+        "1 tsp baking powder"
+      ],
+      "instructions": "Mix all ingredients in a bowl until smooth. Heat butter on a pan and pour small scoops of batter. Cook both sides until golden brown. Serve with syrup or fruit."
+    },
+    {
+      "id": "2",
+      "title": "Avocado Toast",
+      "image": "https://www.themealdb.com/images/media/meals/utxryw1511721587.jpg",
+      "description": "Toasted bread topped with smashed avocado and poached egg.",
+      "type": "Breakfast",
+      "calories": 250,
+      "diet": "Vegan",
+      "ingredients": [
+        "2 slices bread",
+        "1 ripe avocado",
+        "1 egg (optional)",
+        "Salt and pepper",
+        "Lemon juice"
+      ],
+      "instructions": "Toast the bread slices. Smash avocado with salt, pepper, and lemon juice. Spread on toast and top with a poached egg if desired."
+    },
+    {
+      "id": "3",
+      "title": "Omelette",
+      "image": "https://www.themealdb.com/images/media/meals/yvpuuy1511797244.jpg",
+      "description": "Fluffy eggs cooked with onions, tomatoes, and herbs.",
+      "type": "Breakfast",
+      "calories": 280,
+      "diet": "High-Protein",
+      "ingredients": [
+        "3 eggs",
+        "1 tomato, chopped",
+        "1/2 onion, diced",
+        "Salt and pepper",
+        "1 tbsp oil"
+      ],
+      "instructions": "Beat eggs with salt and pepper. Sauté onion and tomato in oil. Pour in the eggs and cook until set. Fold and serve warm."
+    },
+    {
+      "id": "4",
+      "title": "French Toast",
+      "image": "https://www.themealdb.com/images/media/meals/vrspxv1511722107.jpg",
+      "description": "Bread soaked in eggs and milk, fried and topped with syrup.",
+      "type": "Breakfast",
+      "calories": 370,
+      "diet": "Vegetarian",
+      "ingredients": [
+        "2 slices bread",
+        "1 egg",
+        "1/4 cup milk",
+        "1 tsp cinnamon",
+        "1 tbsp butter"
+      ],
+      "instructions": "Whisk egg, milk, and cinnamon. Dip bread in mixture. Fry each side in butter until golden brown. Serve with syrup."
+    },
+    {
+      "id": "5",
+      "title": "Chicken Salad",
+      "image": "https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg",
+      "description": "Fresh salad with grilled chicken, greens, and vinaigrette.",
+      "type": "Lunch",
+      "calories": 420,
+      "diet": "High-Protein",
+      "ingredients": [
+        "1 chicken breast",
+        "Lettuce",
+        "Cherry tomatoes",
+        "Cucumber",
+        "Vinaigrette dressing"
+      ],
+      "instructions": "Grill the chicken until cooked through. Slice and toss with lettuce, tomatoes, cucumber, and vinaigrette."
+    },
+    {
+      "id": "6",
+      "title": "Caesar Salad",
+      "image": "https://www.themealdb.com/images/media/meals/llcbn01574260722.jpg",
+      "description": "Classic salad with romaine, parmesan, croutons, and creamy dressing.",
+      "type": "Lunch",
+      "calories": 310,
+      "diet": "Vegetarian",
+      "ingredients": [
+        "Romaine lettuce",
+        "Parmesan cheese",
+        "Croutons",
+        "Caesar dressing"
+      ],
+      "instructions": "Toss lettuce with dressing, top with croutons and parmesan shavings. Serve chilled."
+    },
+    {
+      "id": "7",
+      "title": "Grilled Sandwich",
+      "image": "https://www.themealdb.com/images/media/meals/xutquv1505330523.jpg",
+      "description": "Crispy grilled sandwich filled with cheese and veggies.",
+      "type": "Lunch",
+      "calories": 340,
+      "diet": "Vegetarian",
+      "ingredients": [
+        "2 slices bread",
+        "Cheese",
+        "Tomato",
+        "Lettuce",
+        "Butter"
+      ],
+      "instructions": "Assemble sandwich with cheese and veggies. Spread butter on outer sides and grill until golden brown."
+    },
+    {
+      "id": "8",
+      "title": "Beef Burger",
+      "image": "https://www.themealdb.com/images/media/meals/sxysrt1468240488.jpg",
+      "description": "Juicy beef patty with lettuce, tomato, and cheese.",
+      "type": "Lunch",
+      "calories": 550,
+      "diet": "Gluten",
+      "ingredients": [
+        "Beef patty",
+        "Burger bun",
+        "Lettuce",
+        "Tomato",
+        "Cheese slice"
+      ],
+      "instructions": "Grill the beef patty. Assemble burger with lettuce, tomato, and cheese inside the toasted bun."
+    },
+    {
+      "id": "9",
+      "title": "Spaghetti Bolognese",
+      "image": "https://www.themealdb.com/images/media/meals/sutysw1468247559.jpg",
+      "description": "Classic Italian pasta with tomato meat sauce.",
+      "type": "Dinner",
+      "calories": 590,
+      "diet": "Gluten",
+      "ingredients": [
+        "Spaghetti",
+        "Minced beef",
+        "Tomato sauce",
+        "Garlic",
+        "Onion"
+      ],
+      "instructions": "Cook spaghetti. Sauté onion and garlic, add beef and cook. Stir in tomato sauce and simmer. Serve sauce over pasta."
+    },
+    {
+      "id": "10",
+      "title": "Grilled Salmon",
+      "image": "https://www.themealdb.com/images/media/meals/1548772327.jpg",
+      "description": "Salmon fillet grilled to perfection with herbs.",
+      "type": "Dinner",
+      "calories": 480,
+      "diet": "Pescatarian",
+      "ingredients": [
+        "Salmon fillet",
+        "Olive oil",
+        "Lemon",
+        "Garlic",
+        "Parsley"
+      ],
+      "instructions": "Brush salmon with oil and herbs. Grill each side for 4-5 minutes. Squeeze lemon juice before serving."
+    },
+    {
+      "id": "11",
+      "title": "Vegetable Stir Fry",
+      "image": "https://www.themealdb.com/images/media/meals/wqurxy1511453156.jpg",
+      "description": "Colorful veggies stir-fried with soy sauce and noodles.",
+      "type": "Dinner",
+      "calories": 350,
+      "diet": "Vegan",
+      "ingredients": [
+        "Mixed vegetables",
+        "Soy sauce",
+        "Noodles",
+        "Garlic",
+        "Oil"
+      ],
+      "instructions": "Heat oil, stir-fry vegetables and garlic. Add noodles and soy sauce. Toss well and serve hot."
+    },
+    {
+      "id": "12",
+      "title": "Chicken Curry",
+      "image": "https://www.themealdb.com/images/media/meals/1525873040.jpg",
+      "description": "Spicy and flavorful chicken curry served with rice.",
+      "type": "Dinner",
+      "calories": 530,
+      "diet": "High-Protein",
+      "ingredients": [
+        "Chicken pieces",
+        "Onion",
+        "Garlic",
+        "Curry powder",
+        "Coconut milk"
+      ],
+      "instructions": "Sauté onion and garlic. Add chicken and spices. Pour in coconut milk and simmer until chicken is tender."
+    },
+    {
+      "id": "13",
+      "title": "Chocolate Ice Cream",
+      "image": "https://www.themealdb.com/images/media/meals/adxcbq1619787919.jpg",
+      "description": "Rich and creamy chocolate ice cream dessert.",
+      "type": "Dessert",
+      "calories": 280,
+      "diet": "Vegetarian",
+      "ingredients": [
+        "Cocoa powder",
+        "Milk",
+        "Cream",
+        "Sugar",
+        "Chocolate chips"
+      ],
+      "instructions": "Mix all ingredients, churn in an ice cream maker, and freeze for 4 hours before serving."
+    },
+    {
+      "id": "14",
+      "title": "Fruit Salad",
+      "image": "https://www.themealdb.com/images/media/meals/wxywrq1468235067.jpg",
+      "description": "Fresh seasonal fruits served in a light syrup.",
+      "type": "Dessert",
+      "calories": 200,
+      "diet": "Vegan",
+      "ingredients": [
+        "Apples",
+        "Bananas",
+        "Grapes",
+        "Oranges",
+        "Honey or syrup"
+      ],
+      "instructions": "Chop all fruits, mix in a bowl, and drizzle honey or syrup on top. Serve chilled."
+    },
+    {
+      "id": "15",
+      "title": "Cheesecake",
+      "image": "https://www.themealdb.com/images/media/meals/wyrqqq1468233628.jpg",
+      "description": "Creamy cheesecake with a buttery biscuit crust.",
+      "type": "Dessert",
+      "calories": 430,
+      "diet": "Vegetarian",
+      "ingredients": [
+        "Cream cheese",
+        "Sugar",
+        "Eggs",
+        "Butter",
+        "Biscuits"
+      ],
+      "instructions": "Crush biscuits with butter for crust. Mix cream cheese, sugar, and eggs. Pour on crust and bake until set."
+    },
+    {
+      "id": "16",
+      "title": "Apple Pie",
+      "image": "https://www.themealdb.com/images/media/meals/1549542877.jpg",
+      "description": "Classic pie made with cinnamon-spiced apples and pastry crust.",
+      "type": "Dessert",
+      "calories": 390,
+      "diet": "Vegetarian",
+      "ingredients": [
+        "Apples",
+        "Sugar",
+        "Cinnamon",
+        "Pie crust",
+        "Butter"
+      ],
+      "instructions": "Slice apples and mix with sugar and cinnamon. Place into crust, cover with top layer, and bake until golden."
+    }
+  ]
+}
