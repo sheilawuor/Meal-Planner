@@ -1,0 +1,150 @@
+	
+
+{
+  "meals": [
+    {
+      "id": 1,
+      "title": "Pancakes",
+      "image": "https://www.themealdb.com/images/media/meals/rwuyqx1511383174.jpg",
+      "description": "Fluffy pancakes perfect for breakfast.",
+      "type": "Breakfast",
+      "calories": 350,
+      "diet": "Vegetarian"
+    },
+    {
+      "id": 2,
+      "title": "Avocado Toast",
+      "image": "https://www.themealdb.com/images/media/meals/utxryw1511721587.jpg",
+      "description": "Toasted bread topped with smashed avocado and poached egg.",
+      "type": "Breakfast",
+      "calories": 250,
+      "diet": "Vegan"
+    },
+    {
+      "id": 3,
+      "title": "Omelette",
+      "image": "https://www.themealdb.com/images/media/meals/yvpuuy1511797244.jpg",
+      "description": "Fluffy eggs cooked with onions, tomatoes, and herbs.",
+      "type": "Breakfast",
+      "calories": 280,
+      "diet": "High-Protein"
+    },
+    {
+      "id": 4,
+      "title": "French Toast",
+      "image": "https://www.themealdb.com/images/media/meals/vrspxv1511722107.jpg",
+      "description": "Bread soaked in eggs and milk, fried and topped with syrup.",
+      "type": "Breakfast",
+      "calories": 370,
+      "diet": "Vegetarian"
+    },
+    {
+      "id": 5,
+      "title": "Chicken Salad",
+      "image": "https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg",
+      "description": "Fresh salad with grilled chicken, greens, and vinaigrette.",
+      "type": "Lunch",
+      "calories": 420,
+      "diet": "High-Protein"
+    },
+    {
+      "id": 6,
+      "title": "Caesar Salad",
+      "image": "https://www.themealdb.com/images/media/meals/llcbn01574260722.jpg",
+      "description": "Classic salad with romaine, parmesan, croutons, and creamy dressing.",
+      "type": "Lunch",
+      "calories": 310,
+      "diet": "Vegetarian"
+    },
+    {
+      "id": 7,
+      "title": "Grilled Sandwich",
+      "image": "https://www.themealdb.com/images/media/meals/xutquv1505330523.jpg",
+      "description": "Crispy grilled sandwich filled with cheese and veggies.",
+      "type": "Lunch",
+      "calories": 340,
+      "diet": "Vegetarian"
+    },
+    {
+      "id": 8,
+      "title": "Beef Burger",
+      "image": "https://www.themealdb.com/images/media/meals/sxysrt1468240488.jpg",
+      "description": "Juicy beef patty with lettuce, tomato, and cheese.",
+      "type": "Lunch",
+      "calories": 550,
+      "diet": "Gluten"
+    },
+    {
+      "id": 9,
+      "title": "Spaghetti Bolognese",
+      "image": "https://www.themealdb.com/images/media/meals/sutysw1468247559.jpg",
+      "description": "Classic Italian pasta with tomato meat sauce.",
+      "type": "Dinner",
+      "calories": 590,
+      "diet": "Gluten"
+    },
+    {
+      "id": 10,
+      "title": "Grilled Salmon",
+      "image": "https://www.themealdb.com/images/media/meals/1548772327.jpg",
+      "description": "Salmon fillet grilled to perfection with herbs.",
+      "type": "Dinner",
+      "calories": 480,
+      "diet": "Pescatarian"
+    },
+    {
+      "id": 11,
+      "title": "Vegetable Stir Fry",
+      "image": "https://www.themealdb.com/images/media/meals/wqurxy1511453156.jpg",
+      "description": "Colorful veggies stir-fried with soy sauce and noodles.",
+      "type": "Dinner",
+      "calories": 350,
+      "diet": "Vegan"
+    },
+    {
+      "id": 12,
+      "title": "Chicken Curry",
+      "image": "https://www.themealdb.com/images/media/meals/1525873040.jpg",
+      "description": "Spicy and flavorful chicken curry served with rice.",
+      "type": "Dinner",
+      "calories": 530,
+      "diet": "High-Protein"
+    },
+    {
+      "id": 13,
+      "title": "Chocolate Ice Cream",
+      "image": "https://www.themealdb.com/images/media/meals/adxcbq1619787919.jpg",
+      "description": "Rich and creamy chocolate ice cream dessert.",
+      "type": "Dessert",
+      "calories": 280,
+      "diet": "Vegetarian"
+    },
+    {
+      "id": 14,
+      "title": "Fruit Salad",
+      "image": "https://www.themealdb.com/images/media/meals/wxywrq1468235067.jpg",
+      "description": "Fresh seasonal fruits served in a light syrup.",
+      "type": "Dessert",
+      "calories": 200,
+      "diet": "Vegan"
+    },
+    {
+      "id": 15,
+      "title": "Cheesecake",
+      "image": "https://www.themealdb.com/images/media/meals/wyrqqq1468233628.jpg",
+      "description": "Creamy cheesecake with a buttery biscuit crust.",
+      "type": "Dessert",
+      "calories": 430,
+      "diet": "Vegetarian"
+    },
+    {
+      "id": 16,
+      "title": "Apple Pie",
+      "image": "https://www.themealdb.com/images/media/meals/1549542877.jpg",
+      "description": "Classic pie made with cinnamon-spiced apples and pastry crust.",
+      "type": "Dessert",
+      "calories": 390,
+      "diet": "Vegetarian"
+    }
+  ]
+}
