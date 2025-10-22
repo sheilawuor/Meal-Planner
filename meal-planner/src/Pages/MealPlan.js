@@ -51,4 +51,4 @@ function MealPlan() {
   );
 }
 
-export default MealPlan
+export default MealPlan;
