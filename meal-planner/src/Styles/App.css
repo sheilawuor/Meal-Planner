@@ -26,8 +26,6 @@
   --back-btn-hover-bg: #43a047;
   --empty-color: #bbb;
 }
-
-/* Apply variables */
 body {
   background-color: var(--bg-color);
   color: var(--text-color);

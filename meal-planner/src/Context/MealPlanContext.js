@@ -8,15 +8,30 @@ export const MealPlanProvider = ({ children }) => {
 
   // Add meal to meal plan and its ingredients to shopping list
   const addToMealPlan = (meal) => {
+    if (!meal || !meal.id) return;
+    const alreadyAdded = mealPlan.some((m) => m.id === meal.id);
+    if (alreadyAdded) {
+      alert(`${meal.title} is already in your meal plan.`);
+      return;
+    }
     setMealPlan((prev) => [...prev, meal]);
-    if (meal.ingredients) {
-      setShoppingList((prev) => [...prev, ...meal.ingredients]);
+    if (meal.ingredients && meal.ingredients.length > 0) {
+      setShoppingList((prev) =>{
+        const newItems = meal.ingredients.filter(
+          (ing) => !prev.includes(ing)
+        );
+        return [...prev, ...newItems];
+      });
     }
   };
 
+  const removeFromMealPlan = (mealId) => {
+    setMealPlan((prev) => prev.filter((m) => m.id !== mealId));
+  }
+
   return (
     <MealPlanContext.Provider
-      value={{ mealPlan, addToMealPlan, shoppingList }}
+      value={{ mealPlan, addToMealPlan, shoppingList , removeFromMealPlan}}
     >
       {children}
     </MealPlanContext.Provider>
