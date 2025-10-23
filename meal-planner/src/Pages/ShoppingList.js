@@ -5,26 +5,33 @@ function ShoppingList() {
   const [inputValue, setInputValue] = useState("");
 
   useEffect(() => {
-    fetch('/db.json')
+    fetch('http://localhost:3001/shoppingList')
       .then(res => res.json())
-      .then(data => {
-        if (data.shoppingList) {
-          setItems(data.shoppingList);
-        }
-      });
+      .then(data => setItems(data));
   }, []);
 
   const addItem = () => {
     if (inputValue.trim()) {
-      const newItems = [...items, inputValue.trim()];
-      setItems(newItems);
-      setInputValue("");
+      fetch('http://localhost:3001/shoppingList', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: inputValue.trim() })
+      })
+      .then(res => res.json())
+      .then(newItem => {
+        setItems([...items, newItem]);
+        setInputValue("");
+      });
     }
   };
 
-  const removeItem = (index) => {
-    const newItems = items.filter((_, i) => i !== index);
-    setItems(newItems);
+  const removeItem = (id) => {
+    fetch(`http://localhost:3001/shoppingList/${id}`, {
+      method: 'DELETE'
+    })
+    .then(() => {
+      setItems(items.filter(item => item.id !== id));
+    });
   };
 
   return (
@@ -40,10 +47,10 @@ function ShoppingList() {
         <button onClick={addItem}>Add</button>
       </div>
       <ul>
-        {items.map((item, index) => (
-          <li key={index}>
-            {item}
-            <button onClick={() => removeItem(index)}>Remove</button>
+        {items.map((item) => (
+          <li key={item.id}>
+            {item.name}
+            <button onClick={() => removeItem(item.id)}>🗑️ Remove</button>
           </li>
         ))}
       </ul>
