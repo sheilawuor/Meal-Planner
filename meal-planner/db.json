@@ -1,4 +1,4 @@
- {
+{
   "meals": [
     {
       "id": "1",
@@ -271,6 +271,33 @@
         "Butter"
       ],
       "instructions": "Slice apples and mix with sugar and cinnamon. Place into crust, cover with top layer, and bake until golden."
+    },
+    {
+      "id": 1,
+      "title": "Pancakes",
+      "image": "https://www.themealdb.com/images/media/meals/rwuyqx1511383174.jpg",
+      "description": "Fluffy pancakes perfect for breakfast.",
+      "type": "Breakfast",
+      "calories": 350,
+      "diet": "Vegetarian"
+    },
+    {
+      "id": 4,
+      "title": "Chocolate Ice Cream",
+      "image": "https://www.themealdb.com/images/media/meals/adxcbq1619787919.jpg",
+      "description": "Rich and creamy chocolate ice cream dessert.",
+      "type": "Dessert",
+      "calories": 280,
+      "diet": "Vegetarian"
+    },
+    {
+      "id": 2,
+      "title": "Chicken Salad",
+      "image": "https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg",
+      "description": "Fresh salad with grilled chicken breast and veggies.",
+      "type": "Lunch",
+      "calories": 420,
+      "diet": "High-Protein"
     }
   ]
 }
