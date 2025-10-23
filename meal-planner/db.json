@@ -135,6 +135,114 @@
         "Lemon juice"
       ],
       "instructions": "Toast the bread slices. Smash avocado with salt, pepper, and lemon juice. Spread on toast and top with a poached egg if desired."
+    },
+    {
+      "id": "5",
+      "title": "Chicken Salad",
+      "image": "https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg",
+      "description": "Fresh salad with grilled chicken, greens, and vinaigrette.",
+      "type": "Lunch",
+      "calories": 420,
+      "diet": "High-Protein",
+      "ingredients": [
+        "1 chicken breast",
+        "Lettuce",
+        "Cherry tomatoes",
+        "Cucumber",
+        "Vinaigrette dressing"
+      ],
+      "instructions": "Grill the chicken until cooked through. Slice and toss with lettuce, tomatoes, cucumber, and vinaigrette."
+    },
+    {
+      "id": "1",
+      "title": "Pancakes",
+      "image": "https://www.themealdb.com/images/media/meals/rwuyqx1511383174.jpg",
+      "description": "Fluffy pancakes perfect for breakfast.",
+      "type": "Breakfast",
+      "calories": 350,
+      "diet": "Vegetarian",
+      "ingredients": [
+        "1 cup flour",
+        "2 tbsp sugar",
+        "1 cup milk",
+        "1 egg",
+        "2 tbsp butter",
+        "1 tsp baking powder"
+      ],
+      "instructions": "Mix all ingredients in a bowl until smooth. Heat butter on a pan and pour small scoops of batter. Cook both sides until golden brown. Serve with syrup or fruit."
+    },
+    {
+      "id": "1",
+      "title": "Pancakes",
+      "image": "https://www.themealdb.com/images/media/meals/rwuyqx1511383174.jpg",
+      "description": "Fluffy pancakes perfect for breakfast.",
+      "type": "Breakfast",
+      "calories": 350,
+      "diet": "Vegetarian",
+      "ingredients": [
+        "1 cup flour",
+        "2 tbsp sugar",
+        "1 cup milk",
+        "1 egg",
+        "2 tbsp butter",
+        "1 tsp baking powder"
+      ],
+      "instructions": "Mix all ingredients in a bowl until smooth. Heat butter on a pan and pour small scoops of batter. Cook both sides until golden brown. Serve with syrup or fruit."
+    },
+    {
+      "id": "1",
+      "title": "Pancakes",
+      "image": "https://www.themealdb.com/images/media/meals/rwuyqx1511383174.jpg",
+      "description": "Fluffy pancakes perfect for breakfast.",
+      "type": "Breakfast",
+      "calories": 350,
+      "diet": "Vegetarian",
+      "ingredients": [
+        "1 cup flour",
+        "2 tbsp sugar",
+        "1 cup milk",
+        "1 egg",
+        "2 tbsp butter",
+        "1 tsp baking powder"
+      ],
+      "instructions": "Mix all ingredients in a bowl until smooth. Heat butter on a pan and pour small scoops of batter. Cook both sides until golden brown. Serve with syrup or fruit."
+    }
+  ],
+  "mealPlan": [
+    {
+      "id": "1",
+      "title": "Pancakes",
+      "image": "https://www.themealdb.com/images/media/meals/rwuyqx1511383174.jpg",
+      "description": "Fluffy pancakes perfect for breakfast.",
+      "type": "Breakfast",
+      "calories": 350,
+      "diet": "Vegetarian",
+      "ingredients": [
+        "1 cup flour",
+        "2 tbsp sugar",
+        "1 cup milk",
+        "1 egg",
+        "2 tbsp butter",
+        "1 tsp baking powder"
+      ],
+      "instructions": "Mix all ingredients in a bowl until smooth. Heat butter on a pan and pour small scoops of batter. Cook both sides until golden brown. Serve with syrup or fruit.",
+      "added": true
+    },
+    {
+      "id": "2",
+      "title": "potato wedges",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxnBcftdZ-Wm2GdZKsohln4K10YHwGj3ykgw&s",
+      "description": "Crispy baked potato wedges seasoned with herbs.",
+      "type": "Lunch",
+      "calories": 250,
+      "diet": "Vegan",
+      "ingredients": [
+        "cooking oil",
+        "Salt and pepper",
+        "herbs"
+      ],
+      "instructions": "pour some cooking oil on the potato wedges, add salt, pepper and herbs. Bake in the oven at 200 degrees for 30 minutes or until golden brown.",
+      "added": true
     }
   ]
 }

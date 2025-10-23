@@ -8,23 +8,22 @@ export const MealPlanProvider = ({ children }) => {
 
   
   const fetchMeals = () => {
-    fetch("http://localhost:8000/meals")
-      .then((res) => {
-        if (!res.ok) throw new Error("Failed to fetch meals");
-        return res.json();
-      })
-      .then((data) => {
-        console.log("Fetched meals:", data);
-        setMealPlan(data);
+  fetch("http://localhost:8000/mealPlan")
+    .then((res) => {
+      if (!res.ok) throw new Error("Failed to fetch meal plan");
+      return res.json();
+    })
+    .then((data) => {
+      console.log("Fetched meal plan:", data);
+      setMealPlan(data);
 
-        // 🛒 Build shopping list from all meal ingredients
-        const allIngredients = data.flatMap(
-          (meal) => meal.ingredients || []
-        );
-        setShoppingList(allIngredients);
-      })
-      .catch((err) => console.error("Error fetching meals:", err));
-  };
+      const allIngredients = data.flatMap(
+        (meal) => meal.ingredients || []
+      );
+      setShoppingList(allIngredients);
+    })
+    .catch((err) => console.error("Error fetching meal plan:", err));
+};
 
   useEffect(() => {
     console.log("Fetching meals from JSON server...");
@@ -32,38 +31,34 @@ export const MealPlanProvider = ({ children }) => {
   }, []);
 
   const addToMealPlan = (meal) => {
-    if (!meal || !meal.id) return;
-    const alreadyAdded = mealPlan.some((m) => m.id === meal.id);
-    if (alreadyAdded) {
-      alert(`${meal.title} is already in your meal plan.`);
-      return;
-    }
-    setMealPlan((prev) => {
-      const exists = prev.some((m) => m.id === meal.id);
-      if (exists) return prev;
-      return [...prev, meal];
-  });
-    if (meal.ingredients && meal.ingredients.length > 0) {
-      setShoppingList((prev) =>{
-        const newItems = meal.ingredients.filter(
-          (ing) => !prev.includes(ing)
-        );
-        return [...prev, ...newItems];
-      });
-    }
+  if (!meal || !meal.id) return;
+  const alreadyAdded = mealPlan.some((m) => m.id === meal.id);
+  if (alreadyAdded) {
+    alert(`${meal.title} is already in your meal plan.`);
+    return;
+  }
 
-    fetch("http://localhost:8000/meals", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(meal),
+  const newMeal = { ...meal, added: true };
+  setMealPlan((prev) => [...prev, newMeal]);
+
+  if (meal.ingredients?.length) {
+    setShoppingList((prev) => [
+      ...prev,
+      ...meal.ingredients.filter((ing) => !prev.includes(ing)),
+    ]);
+  }
+
+  fetch("http://localhost:8000/mealPlan", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(newMeal),
+  })
+    .then((res) => {
+      if (!res.ok) throw new Error("Failed to save meal to plan");
+      console.log("Meal added to plan:", newMeal.title);
     })
-      .then((res) => {
-        if (!res.ok) throw new Error("Failed to save meal");
-        console.log("Meal saved:", meal.title);
-        fetchMeals(); // 🔁 refresh meal list after saving
-      })
-      .catch((err) => console.error("Error saving meal:", err));
-  };
+    .catch((err) => console.error("Error saving meal to plan:", err));
+};
 
   const removeFromMealPlan = (mealId) => {
     setMealPlan((prev) => prev.filter((m) => m.id !== mealId));
