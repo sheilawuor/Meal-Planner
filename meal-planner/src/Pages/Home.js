@@ -14,7 +14,7 @@ export default function Home() {
       try {
         const key = process.env.REACT_APP_SPOONACULAR_KEY;
         if (!key) throw new Error('No key');
-        const res = await fetch(`https://api.spoonacular.com/recipes/complexSearch?number=10&addRecipeInformation=true&apiKey=${key}`);
+        const res = await fetch("http://localhost:8000/recipes")
         const data = await res.json();
         setRecipes(data.results && data.results.length ? data.results : mockRecipes);
       } catch {

@@ -1,3 +1,39 @@
+/* Define theme variables */
+:root[data-theme='light'] {
+  --bg-color: #fff;
+  --text-color: #111;
+  --card-bg: #fff;
+  --card-border: rgba(0,0,0,0.1);
+  --btn-bg: #e0e0e0;
+  --btn-hover-bg: #cfcfcf;
+  --btn-active-bg: #4caf50;
+  --btn-active-color: #fff;
+  --back-btn-bg: #4caf50;
+  --back-btn-hover-bg: #43a047;
+  --empty-color: #777;
+}
+
+:root[data-theme='dark'] {
+  --bg-color: #111;
+  --text-color: #eee;
+  --card-bg: #222;
+  --card-border: #444;
+  --btn-bg: #333;
+  --btn-hover-bg: #555;
+  --btn-active-bg: #4caf50;
+  --btn-active-color: #fff;
+  --back-btn-bg: #4caf50;
+  --back-btn-hover-bg: #43a047;
+  --empty-color: #bbb;
+}
+
+/* Apply variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Filter buttons */
 .filter-sort {
   text-align: center;
   margin: 20px 0;
@@ -11,23 +47,25 @@
 }
 
 .filter-buttons button {
-  background: #e0e0e0;
+  background: var(--btn-bg);
   border: none;
   padding: 8px 16px;
   border-radius: 20px;
   cursor: pointer;
   transition: 0.3s;
+  color: var(--text-color);
 }
 
 .filter-buttons button:hover {
-  background: #cfcfcf;
+  background: var(--btn-hover-bg);
 }
 
 .filter-buttons .active {
-  background: #4caf50;
-  color: white;
+  background: var(--btn-active-bg);
+  color: var(--btn-active-color);
 }
 
+/* Recipe cards */
 .recipe-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -36,12 +74,13 @@
 }
 
 .recipe-card {
-  background: #fff;
+  background: var(--card-bg);
   border-radius: 12px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 6px var(--card-border);
   text-align: center;
   padding: 10px;
   transition: transform 0.3s ease;
+  color: var(--text-color);
 }
 
 .recipe-card:hover {
@@ -59,14 +98,17 @@
   margin-top: 8px;
   font-size: 1rem;
 }
+
+/* Meal details */
 .meal-details {
   max-width: 700px;
   margin: 40px auto;
-  background: #fff;
+  background: var(--card-bg);
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0px 4px 10px var(--card-border);
   text-align: left;
+  color: var(--text-color);
 }
 
 .meal-details-img {
@@ -74,9 +116,10 @@
   border-radius: 10px;
 }
 
+/* Back button */
 .back-btn {
-  background: #4caf50;
-  color: white;
+  background: var(--back-btn-bg);
+  color: var(--btn-active-color);
   border: none;
   border-radius: 6px;
   padding: 8px 16px;
@@ -85,8 +128,10 @@
 }
 
 .back-btn:hover {
-  background: #43a047;
+  background: var(--back-btn-hover-bg);
 }
+
+/* Recipe list */
 .recipe-list-container {
   padding: 20px;
 }
@@ -99,6 +144,6 @@
 
 .empty {
   text-align: center;
-  color: #777;
+  color: var(--empty-color);
   margin-top: 40px;
 }
