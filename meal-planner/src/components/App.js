@@ -18,14 +18,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/recipes" element={<Recipes />} />
-            
-            {/* ✅ Support both /mealplan and /meal-plan */}
-            <Route path="/mealplan" element={<MealPlan />} />
             <Route path="/meal-plan" element={<MealPlan />} />
-
-            <Route path="/shoppinglist" element={<ShoppingList />} />
             <Route path="/shopping-list" element={<ShoppingList />} />
-
             <Route path="/recipes/:id" element={<MealDetails />} />
           </Routes>
         </Router>

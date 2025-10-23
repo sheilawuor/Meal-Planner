@@ -1,90 +1,75 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
+import RecipeList from "../components/RecipeList";
+import { useEffect } from "react";
 import mockRecipes from "../Data/mockRecipes";
-import { MealPlanContext } from "../Context/MealPlanContext";
 
 function Recipes() {
-  const [filteredRecipes, setFilteredRecipes] = useState(mockRecipes);
-  const { addToMealPlan } = useContext(MealPlanContext); //extract function from context
-
-  // Filter recipes by type
-  const filterByType = (type) => {
-    if (type === "all") {
-      setFilteredRecipes(mockRecipes);
-    } else {
-      setFilteredRecipes(
-        mockRecipes.filter((recipe) => recipe.type.toLowerCase() === type.toLowerCase())
-      );
+  
+  const [recipes, setRecipes] = useState([]);
+  const [mealPlan, setMealPlan] = useState([]);
+  
+    useEffect(() => {
+      async function load() {
+        try {
+          const key = process.env.REACT_APP_SPOONACULAR_KEY;
+          if (!key) throw new Error('No key');
+          const res = await fetch("http://localhost:8000/recipes")
+          const data = await res.json();
+          setRecipes(data.results && data.results.length ? data.results : mockRecipes);
+        } catch {
+          setRecipes(mockRecipes);
+        }
+      }
+      load();
+    }, []);
+  
+    function addToMealPlan(recipe) {
+      const primary = (recipe.dishTypes && recipe.dishTypes[0]) || recipe.category || 'other';
+      const existsInCategory = mealPlan.some(m => ((m.dishTypes && m.dishTypes[0]) || m.category || 'other') === primary);
+      if (existsInCategory) {
+        alert(`You already have a ${primary} meal in your plan. Remove it first to add another.`);
+        return;
+      }
+      const item = {
+        id: recipe.id || Date.now(),
+        title: recipe.title,
+        dishTypes: recipe.dishTypes || [primary],
+        calories: recipe.calories || (recipe.nutrition && recipe.nutrition.nutrients && recipe.nutrition.nutrients.find(n=>n.name==='Calories')?.amount) || null,
+        image: recipe.image,
+      };
+      setMealPlan(prev => [item, ...prev]);
+      setRecipes(prev => prev.filter(r => r.id !== recipe.id));
     }
-  };
-
-  // Filter recipes by diet
-  const filterByDiet = (diet) => {
-    if (diet === "all") {
-      setFilteredRecipes(mockRecipes);
-    } else {
-      setFilteredRecipes(
-        mockRecipes.filter((recipe) => recipe.diet.toLowerCase() === diet.toLowerCase())
-      );
+  
+    function addManualMeal(meal) {
+      const primary = (meal.dishTypes && meal.dishTypes[0]) || meal.category || 'other';
+      const exists = mealPlan.some(m => ((m.dishTypes && m.dishTypes[0]) || m.category || 'other') === primary);
+      if (exists) {
+        alert(`You already have a ${primary} meal in your plan.`);
+        return;
+      }
+      setMealPlan(prev => [meal, ...prev]);
     }
-  };
+  
+    function removeFromMealPlan(id) {
+      const removed = mealPlan.find(m => m.id === id);
+      setMealPlan(prev => prev.filter(p => p.id !== id));
+      // put removed recipe back into recipes if it has an image/title (re-insert)
+      if (removed && removed.title) {
+        setRecipes(prev => [ { id: removed.id, title: removed.title, image: removed.image, dishTypes: removed.dishTypes, calories: removed.calories }, ...prev ]);
+      }
+    }
+
+  
 
   return (
     <div style={{ padding: "20px" }}>
-      <h2>Filter by Type</h2>
-      <div>
-        <button onClick={() => filterByType("all")}>All</button>
-        <button onClick={() => filterByType("breakfast")}>Breakfast</button>
-        <button onClick={() => filterByType("lunch")}>Lunch</button>
-        <button onClick={() => filterByType("dinner")}>Dinner</button>
-        <button onClick={() => filterByType("dessert")}>Dessert</button>
-      </div>
+      <section className="section">
+              <h2>Discover Recipes</h2>
+              <RecipeList recipesFromParent={recipes} onAddToMealPlan={addToMealPlan} />
+            </section>
 
-      <h2>Filter by Diet</h2>
-      <div>
-        <button onClick={() => filterByDiet("all")}>All</button>
-        <button onClick={() => filterByDiet("vegetarian")}>Vegetarian</button>
-        <button onClick={() => filterByDiet("vegan")}>Vegan</button>
-        <button onClick={() => filterByDiet("high-protein")}>High-Protein</button>
-        <button onClick={() => filterByDiet("gluten")}>Gluten</button>
-      </div>
-
-      <h2>Recipes</h2>
-      <ul style={{ listStyle: "none", padding: 0 }}>
-        {filteredRecipes.map((r) => (  // ✅ r is defined here
-          <li
-            key={r.id}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              marginBottom: "15px",
-              border: "1px solid #ccc",
-              padding: "10px",
-              borderRadius: "8px",
-            }}
-          >
-            <img
-              src={r.image || "https://via.placeholder.com/100?text=No+Image"}
-              alt={r.title || "Untitled Meal"}
-              style={{
-                width: "100px",
-                height: "100px",
-                borderRadius: "8px",
-                marginRight: "15px",
-                objectFit: "cover",
-              }}
-            />
-            <div style={{ flex: 1 }}>
-              <strong>{r.title}</strong> <br />
-              Type: {r.type} | Diet: {r.diet} <br />
-              Calories: {r.calories} <br />
-              {r.description}
-            </div>
-            <button style={{ marginLeft: "15px" }} onClick={() => addToMealPlan(r)}>
-              Add to Meal Plan
-            </button>
-          </li>
-        ))}
-      </ul>
+      
     </div>
   );
 }

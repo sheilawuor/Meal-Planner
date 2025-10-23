@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { MealPlanContext } from "../Context/MealPlanContext";
 
 function MealPlan() {
-  const { mealPlan } = useContext(MealPlanContext);
+  const { mealPlan,removeFromMealPlan } = useContext(MealPlanContext);
 
   return (
     <div style={{ padding: "20px" }}>
@@ -43,6 +43,19 @@ function MealPlan() {
                 {meal.calories ? `Calories: ${meal.calories}` : ""} <br />
                 {meal.description || "No description"}
               </div>
+              <button
+                onClick={() => removeFromMealPlan(meal.id)}
+                style={{
+                  backgroundColor: "#ff6666",
+                  color: "white",
+                  border: "none",
+                  padding: "8px 12px",
+                  borderRadius: "6px",
+                  cursor: "pointer",
+                }}
+              >
+                Remove
+              </button>
             </li>
           ))}
         </ul>

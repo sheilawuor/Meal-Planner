@@ -1,19 +1,30 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import mockRecipes from "../Data/mockRecipes";
 import RecipeCard from "./RecipeCard";
 import SortBar from "./SortBar";
+import {MealPlanContext} from "../Context/MealPlanContext";
 
-export default function RecipeList({ onAddToMealPlan }) {
+export default function RecipeList() {
   const [recipes, setRecipes] = useState([]);
   const [query, setQuery] = useState("");
   const [filterType, setFilterType] = useState("all");
   const [filterDiet, setFilterDiet] = useState("all");
   const [sortOption, setSortOption] = useState("none");
 
+  const { addToMealPlan } = useContext(MealPlanContext);
+
+
   
   useEffect(() => {
     fetch("http://localhost:8000/meals")
       .then((res) => res.json())
-      .then((data) => setRecipes(data))
+      .then((data) =>{
+        if (Array.isArray(data) && data.length > 0) {
+          setRecipes(data);
+        } else {
+          setRecipes(mockRecipes);
+        }
+      } )
       .catch((err) => console.error("Error fetching meals:", err));
   }, []);
 
@@ -53,9 +64,40 @@ export default function RecipeList({ onAddToMealPlan }) {
 
   const visible = applyFilters(recipes);
 
-  return (
-    <div className="recipe-list-container">
-      {/* Search & Filter Controls */}
+    return (
+    <div style={{ padding: "20px" }}>
+      <h2>Filter by Type</h2>
+      <div>
+        {["all", "breakfast", "lunch", "dinner", "dessert"].map((type) => (
+          <button
+            key={type}
+            onClick={() => setFilterType(type)}
+            style={{
+              backgroundColor: filterType === type ? "#ccc" : "#eee",
+              margin: "0 5px",
+            }}
+          >
+            {type.charAt(0).toUpperCase() + type.slice(1)}
+          </button>
+        ))}
+      </div>
+
+      <h2>Filter by Diet</h2>
+      <div>
+        {["all", "vegetarian", "vegan", "high-protein", "gluten"].map((diet) => (
+          <button
+            key={diet}
+            onClick={() => setFilterDiet(diet)}
+            style={{
+              backgroundColor: filterDiet === diet ? "#ccc" : "#eee",
+              margin: "0 5px",
+            }}
+          >
+            {diet.charAt(0).toUpperCase() + diet.slice(1)}
+          </button>
+        ))}
+      </div>
+
       <div
         style={{
           display: "flex",
@@ -72,44 +114,20 @@ export default function RecipeList({ onAddToMealPlan }) {
           style={{ padding: "8px", borderRadius: "6px", border: "1px solid #ccc" }}
         />
 
-        <select
-          value={filterType}
-          onChange={(e) => setFilterType(e.target.value)}
-          style={{ padding: "8px", borderRadius: "6px" }}
-        >
-          <option value="all">All types</option>
-          <option value="Breakfast">Breakfast</option>
-          <option value="Lunch">Lunch</option>
-          <option value="Dinner">Dinner</option>
-          <option value="Dessert">Dessert</option>
-        </select>
-
-        <select
-          value={filterDiet}
-          onChange={(e) => setFilterDiet(e.target.value)}
-          style={{ padding: "8px", borderRadius: "6px" }}
-        >
-          <option value="all">All diets</option>
-          <option value="Vegetarian">Vegetarian</option>
-          <option value="Vegan">Vegan</option>
-          <option value="Pescatarian">Pescatarian</option>
-          <option value="High-Protein">High-Protein</option>
-          <option value="Gluten">Gluten</option>
-        </select>
-
         <SortBar value={sortOption} onChange={setSortOption} />
       </div>
 
-      {/* Recipe Cards */}
       {visible.length === 0 ? (
         <p className="empty">No recipes found.</p>
       ) : (
         <div className="grid">
           {visible.map((r) => (
-            <RecipeCard key={r.id} recipe={r} onAdd={onAddToMealPlan} />
+            <RecipeCard key={r.id} recipe={r} onAdd={() => addToMealPlan(r)}/>
           ))}
         </div>
       )}
     </div>
+  
   );
+  
 }
