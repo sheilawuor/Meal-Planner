@@ -20,4 +20,4 @@ function ShoppingList() {
   );
 }
 
-export default ShoppingList
+export default ShoppingList;
