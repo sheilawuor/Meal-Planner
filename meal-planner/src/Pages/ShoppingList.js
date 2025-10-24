@@ -4,15 +4,17 @@ function ShoppingList() {
   const [items, setItems] = useState([]);
   const [inputValue, setInputValue] = useState("");
 
+  // Fetch existing shopping list items from JSON Server
   useEffect(() => {
-    fetch('http://localhost:3001/shoppingList')
+    fetch('http://localhost:8000/shoppingList')
       .then(res => res.json())
       .then(data => setItems(data));
   }, []);
 
+  // Add a new item
   const addItem = () => {
     if (inputValue.trim()) {
-      fetch('http://localhost:3001/shoppingList', {
+      fetch('http://localhost:8000/shoppingList', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name: inputValue.trim() })
@@ -25,8 +27,9 @@ function ShoppingList() {
     }
   };
 
+  // Remove an item
   const removeItem = (id) => {
-    fetch(`http://localhost:3001/shoppingList/${id}`, {
+    fetch(`http://localhost:8000/shoppingList/${id}`, {
       method: 'DELETE'
     })
     .then(() => {
@@ -59,3 +62,4 @@ function ShoppingList() {
 }
 
 export default ShoppingList;
+

@@ -1,5 +1,14 @@
 {
-  "shoppingList": [],
+  "shoppingList": [
+    {
+      "id": "1",
+      "name": "1 cup flour"
+    },
+    {
+      "id": "2",
+      "name": "2 tbsp sugar"
+    }
+  ],
   "meals": [
     {
       "id": "1",
@@ -242,6 +251,60 @@
         "herbs"
       ],
       "instructions": "pour some cooking oil on the potato wedges, add salt, pepper and herbs. Bake in the oven at 200 degrees for 30 minutes or until golden brown.",
+      "added": true
+    },
+    {
+      "id": "3",
+      "title": "Omelette",
+      "image": "https://www.themealdb.com/images/media/meals/yvpuuy1511797244.jpg",
+      "description": "Fluffy eggs cooked with onions, tomatoes, and herbs.",
+      "type": "Breakfast",
+      "calories": 280,
+      "diet": "High-Protein",
+      "ingredients": [
+        "3 eggs",
+        "1 tomato, chopped",
+        "1/2 onion, diced",
+        "Salt and pepper",
+        "1 tbsp oil"
+      ],
+      "instructions": "Beat eggs with salt and pepper. Sauté onion and tomato in oil. Pour in the eggs and cook until set. Fold and serve warm.",
+      "added": true
+    },
+    {
+      "id": "5",
+      "title": "Chicken Salad",
+      "image": "https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg",
+      "description": "Fresh salad with grilled chicken, greens, and vinaigrette.",
+      "type": "Lunch",
+      "calories": 420,
+      "diet": "High-Protein",
+      "ingredients": [
+        "1 chicken breast",
+        "Lettuce",
+        "Cherry tomatoes",
+        "Cucumber",
+        "Vinaigrette dressing"
+      ],
+      "instructions": "Grill the chicken until cooked through. Slice and toss with lettuce, tomatoes, cucumber, and vinaigrette.",
+      "added": true
+    },
+    {
+      "id": "4",
+      "title": "Avocado Toast",
+      "image": "https://thesaltypot.com/wp-content/uploads/2019/02/Avocado-Toast09.jpg",
+      "description": "Toasted bread topped with smashed avocado and poached egg.",
+      "type": "Breakfast",
+      "calories": 250,
+      "diet": "Vegan",
+      "ingredients": [
+        "2 slices bread",
+        "1 ripe avocado",
+        "1 egg (optional)",
+        "Salt and pepper",
+        "Lemon juice"
+      ],
+      "instructions": "Toast the bread slices. Smash avocado with salt, pepper, and lemon juice. Spread on toast and top with a poached egg if desired.",
       "added": true
     }
   ]
