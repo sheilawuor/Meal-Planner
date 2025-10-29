@@ -30,7 +30,7 @@
     },
     {
       "id": "2",
-      "title": "potato wedges",
+      "title": "Potato Wedges",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxnBcftdZ-Wm2GdZKsohln4K10YHwGj3ykgw&s",
       "description": "Crispy baked potato wedges seasoned with herbs.",
       "type": "Lunch",
@@ -59,74 +59,6 @@
         "1 tbsp oil"
       ],
       "instructions": "Beat eggs with salt and pepper. Sauté onion and tomato in oil. Pour in the eggs and cook until set. Fold and serve warm."
-    },
-    {
-      "id": "5",
-      "title": "Chicken Salad",
-      "image": "https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg",
-      "description": "Fresh salad with grilled chicken, greens, and vinaigrette.",
-      "type": "Lunch",
-      "calories": 420,
-      "diet": "High-Protein",
-      "ingredients": [
-        "1 chicken breast",
-        "Lettuce",
-        "Cherry tomatoes",
-        "Cucumber",
-        "Vinaigrette dressing"
-      ],
-      "instructions": "Grill the chicken until cooked through. Slice and toss with lettuce, tomatoes, cucumber, and vinaigrette."
-    },
-    {
-      "id": "9",
-      "title": "Spaghetti Bolognese",
-      "image": "https://www.themealdb.com/images/media/meals/sutysw1468247559.jpg",
-      "description": "Classic Italian pasta with tomato meat sauce.",
-      "type": "Dinner",
-      "calories": 590,
-      "diet": "Gluten",
-      "ingredients": [
-        "Spaghetti",
-        "Minced beef",
-        "Tomato sauce",
-        "Garlic",
-        "Onion"
-      ],
-      "instructions": "Cook spaghetti. Sauté onion and garlic, add beef and cook. Stir in tomato sauce and simmer. Serve sauce over pasta."
-    },
-    {
-      "id": "13",
-      "title": "Chocolate Ice Cream",
-      "image": "https://www.themealdb.com/images/media/meals/adxcbq1619787919.jpg",
-      "description": "Rich and creamy chocolate ice cream dessert.",
-      "type": "Dessert",
-      "calories": 280,
-      "diet": "Vegetarian",
-      "ingredients": [
-        "Cocoa powder",
-        "Milk",
-        "Cream",
-        "Sugar",
-        "Chocolate chips"
-      ],
-      "instructions": "Mix all ingredients, churn in an ice cream maker, and freeze for 4 hours before serving."
-    },
-    {
-      "id": "14",
-      "title": "English Breakfast",
-      "image": "https://www.themealdb.com/images/media/meals/utxryw1511721587.jpg",
-      "description": "Toasted bread with a side of eggs, sausages and bacon.",
-      "type": "Breakfast",
-      "calories": 250,
-      "diet": "Vegan",
-      "ingredients": [
-        "2 slices bread",
-        "3 beef sausages",
-        "1 egg (optional)",
-        "Salt and pepper",
-        "Bacon"
-      ],
-      "instructions": "Toast the bread slices.fry sausages and bacon until cooked. Fry egg to preference. Serve all together on a plate."
     },
     {
       "id": "4",
@@ -163,58 +95,55 @@
       "instructions": "Grill the chicken until cooked through. Slice and toss with lettuce, tomatoes, cucumber, and vinaigrette."
     },
     {
-      "id": "1",
-      "title": "Pancakes",
-      "image": "https://www.themealdb.com/images/media/meals/rwuyqx1511383174.jpg",
-      "description": "Fluffy pancakes perfect for breakfast.",
-      "type": "Breakfast",
-      "calories": 350,
-      "diet": "Vegetarian",
+      "id": "6",
+      "title": "Spaghetti Bolognese",
+      "image": "https://www.themealdb.com/images/media/meals/sutysw1468247559.jpg",
+      "description": "Classic Italian pasta with tomato meat sauce.",
+      "type": "Dinner",
+      "calories": 590,
+      "diet": "Gluten",
       "ingredients": [
-        "1 cup flour",
-        "2 tbsp sugar",
-        "1 cup milk",
-        "1 egg",
-        "2 tbsp butter",
-        "1 tsp baking powder"
+        "Spaghetti",
+        "Minced beef",
+        "Tomato sauce",
+        "Garlic",
+        "Onion"
       ],
-      "instructions": "Mix all ingredients in a bowl until smooth. Heat butter on a pan and pour small scoops of batter. Cook both sides until golden brown. Serve with syrup or fruit."
+      "instructions": "Cook spaghetti. Sauté onion and garlic, add beef and cook. Stir in tomato sauce and simmer. Serve sauce over pasta."
     },
     {
-      "id": "1",
-      "title": "Pancakes",
-      "image": "https://www.themealdb.com/images/media/meals/rwuyqx1511383174.jpg",
-      "description": "Fluffy pancakes perfect for breakfast.",
-      "type": "Breakfast",
-      "calories": 350,
+      "id": "7",
+      "title": "Chocolate Ice Cream",
+      "image": "https://www.themealdb.com/images/media/meals/adxcbq1619787919.jpg",
+      "description": "Rich and creamy chocolate ice cream dessert.",
+      "type": "Dessert",
+      "calories": 280,
       "diet": "Vegetarian",
       "ingredients": [
-        "1 cup flour",
-        "2 tbsp sugar",
-        "1 cup milk",
-        "1 egg",
-        "2 tbsp butter",
-        "1 tsp baking powder"
+        "Cocoa powder",
+        "Milk",
+        "Cream",
+        "Sugar",
+        "Chocolate chips"
       ],
-      "instructions": "Mix all ingredients in a bowl until smooth. Heat butter on a pan and pour small scoops of batter. Cook both sides until golden brown. Serve with syrup or fruit."
+      "instructions": "Mix all ingredients, churn in an ice cream maker, and freeze for 4 hours before serving."
     },
     {
-      "id": "1",
-      "title": "Pancakes",
-      "image": "https://www.themealdb.com/images/media/meals/rwuyqx1511383174.jpg",
-      "description": "Fluffy pancakes perfect for breakfast.",
+      "id": "8",
+      "title": "English Breakfast",
+      "image": "https://www.themealdb.com/images/media/meals/utxryw1511721587.jpg",
+      "description": "Toasted bread with a side of eggs, sausages and bacon.",
       "type": "Breakfast",
-      "calories": 350,
-      "diet": "Vegetarian",
+      "calories": 650,
+      "diet": "High-Protein",
       "ingredients": [
-        "1 cup flour",
-        "2 tbsp sugar",
-        "1 cup milk",
-        "1 egg",
-        "2 tbsp butter",
-        "1 tsp baking powder"
+        "2 slices bread",
+        "3 beef sausages",
+        "2 eggs",
+        "Salt and pepper",
+        "Bacon"
       ],
-      "instructions": "Mix all ingredients in a bowl until smooth. Heat butter on a pan and pour small scoops of batter. Cook both sides until golden brown. Serve with syrup or fruit."
+      "instructions": "Toast the bread slices. Fry sausages and bacon until cooked. Fry eggs to preference. Serve all together on a plate."
     }
   ],
   "mealPlan": [
@@ -239,7 +168,7 @@
     },
     {
       "id": "2",
-      "title": "potato wedges",
+      "title": "Potato Wedges",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxnBcftdZ-Wm2GdZKsohln4K10YHwGj3ykgw&s",
       "description": "Crispy baked potato wedges seasoned with herbs.",
       "type": "Lunch",
@@ -305,6 +234,24 @@
         "Lemon juice"
       ],
       "instructions": "Toast the bread slices. Smash avocado with salt, pepper, and lemon juice. Spread on toast and top with a poached egg if desired.",
+      "added": true
+    },
+    {
+      "id": "7",
+      "title": "Chocolate Ice Cream",
+      "image": "https://www.themealdb.com/images/media/meals/adxcbq1619787919.jpg",
+      "description": "Rich and creamy chocolate ice cream dessert.",
+      "type": "Dessert",
+      "calories": 280,
+      "diet": "Vegetarian",
+      "ingredients": [
+        "Cocoa powder",
+        "Milk",
+        "Cream",
+        "Sugar",
+        "Chocolate chips"
+      ],
+      "instructions": "Mix all ingredients, churn in an ice cream maker, and freeze for 4 hours before serving.",
       "added": true
     }
   ]

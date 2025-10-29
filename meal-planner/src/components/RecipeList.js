@@ -67,15 +67,12 @@ export default function RecipeList() {
     return (
     <div style={{ padding: "20px" }}>
       <h2>Filter by Type</h2>
-      <div>
+      <div className="filter-buttons">
         {["all", "breakfast", "lunch", "dinner", "dessert"].map((type) => (
           <button
             key={type}
             onClick={() => setFilterType(type)}
-            style={{
-              backgroundColor: filterType === type ? "#ccc" : "#eee",
-              margin: "0 5px",
-            }}
+            className={filterType === type ? "active" : ""}
           >
             {type.charAt(0).toUpperCase() + type.slice(1)}
           </button>
@@ -83,15 +80,12 @@ export default function RecipeList() {
       </div>
 
       <h2>Filter by Diet</h2>
-      <div>
+      <div className="filter-buttons">
         {["all", "vegetarian", "vegan", "high-protein", "gluten"].map((diet) => (
           <button
             key={diet}
             onClick={() => setFilterDiet(diet)}
-            style={{
-              backgroundColor: filterDiet === diet ? "#ccc" : "#eee",
-              margin: "0 5px",
-            }}
+            className={filterDiet === diet ? "active" : ""}
           >
             {diet.charAt(0).toUpperCase() + diet.slice(1)}
           </button>
@@ -111,7 +105,6 @@ export default function RecipeList() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search recipes..."
-          style={{ padding: "8px", borderRadius: "6px", border: "1px solid #ccc" }}
         />
 
         <SortBar value={sortOption} onChange={setSortOption} />

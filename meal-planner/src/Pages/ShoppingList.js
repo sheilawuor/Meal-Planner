@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./ShoppingList.css";
 
 function ShoppingList() {
   const [items, setItems] = useState([]);
@@ -38,25 +39,40 @@ function ShoppingList() {
   };
 
   return (
-    <div>
-      <h2>Shopping List</h2>
-      <div>
-        <input 
-          type="text" 
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-          placeholder="Enter item"
-        />
-        <button onClick={addItem}>Add</button>
+    <div className="shopping-list-container">
+      <h1>🛒 Shopping List</h1>
+      
+      <div className="shopping-input-section">
+        <h2>Add New Item</h2>
+        <div className="input-group">
+          <input 
+            type="text" 
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            placeholder="Enter shopping item..."
+            onKeyPress={(e) => e.key === 'Enter' && addItem()}
+          />
+          <button onClick={addItem}>Add Item</button>
+        </div>
       </div>
-      <ul>
-        {items.map((item) => (
-          <li key={item.id}>
-            {item.name}
-            <button onClick={() => removeItem(item.id)}>🗑️ Remove</button>
-          </li>
-        ))}
-      </ul>
+
+      <div>
+        <h2>Your Items ({items.length})</h2>
+        {items.length === 0 ? (
+          <div className="empty-state">
+            <p>Your shopping list is empty. Add some items above! 🛍️</p>
+          </div>
+        ) : (
+          <ul>
+            {items.map((item) => (
+              <li key={item.id}>
+                <span className="shopping-item-text">{item.name}</span>
+                <button onClick={() => removeItem(item.id)}>Remove</button>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
     </div>
   );
 }

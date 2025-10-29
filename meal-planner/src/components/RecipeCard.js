@@ -8,7 +8,7 @@ export default function RecipeCard({ recipe, onAdd }) {
       <Link to={`/recipes/${recipe.id}`}>
         <img src={recipe.image} 
         alt={title} 
-        className="recipe-image" />
+        className="recipe-img" />
       </Link>
       <div className="recipe-body">
         <h3 className="recipe-title">{title}</h3>
