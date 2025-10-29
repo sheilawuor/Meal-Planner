@@ -253,6 +253,22 @@
       ],
       "instructions": "Mix all ingredients, churn in an ice cream maker, and freeze for 4 hours before serving.",
       "added": true
+    },
+    {
+      "id": "2",
+      "title": "Potato Wedges",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxnBcftdZ-Wm2GdZKsohln4K10YHwGj3ykgw&s",
+      "description": "Crispy baked potato wedges seasoned with herbs.",
+      "type": "Lunch",
+      "calories": 250,
+      "diet": "Vegan",
+      "ingredients": [
+        "cooking oil",
+        "Salt and pepper",
+        "herbs"
+      ],
+      "instructions": "pour some cooking oil on the potato wedges, add salt, pepper and herbs. Bake in the oven at 200 degrees for 30 minutes or until golden brown.",
+      "added": true
     }
   ]
 }
